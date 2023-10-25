@@ -1,0 +1,29 @@
+.options {
+    width: fit-content !important;
+    margin-top: 40px !important;
+}
+
+.item {
+    text-align: start;
+}
+.item label {
+    display: contents;
+    padding: 10px !important;
+}
+.item input{
+    margin-right: 10px;
+}
+.buttonsColumn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    flex-wrap: nowrap !important;
+    margin-top: 40px !important;
+}
+
+.questionImage{
+    height: 170px !important;
+    width: 170px !important;
+    margin-bottom: 10px;
+}

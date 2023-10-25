@@ -1,0 +1,55 @@
+{
+  "name": "love-meter",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Amna MAMMER",
+    "email": "mammeramna@gmail.com"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.0",
+    "react": "^18.2.0",
+    "react-animations": "^1.0.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.0.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test:types": "tsc"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/react": "^18.2.15",
+    "@types/react-native": "^0.72.2",
+    "@types/react-test-renderer": "^18.0.0",
+    "typescript": "^5.1.6"
+  }
+}

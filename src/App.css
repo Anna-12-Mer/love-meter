@@ -1,0 +1,19 @@
+.App {
+  margin: 16px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.footer {
+  bottom: 0px;
+  width: 100%;
+  color: #B8A4C0;
+  text-align: center;
+  font-size: 12px;
+  bottom: 16px ;
+  position: fixed;
+}
