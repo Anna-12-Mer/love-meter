@@ -27,6 +27,11 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+.subDefaultFontText{
+  text-align: center;
+  margin-top: 20px;
+  color: #B8A4C0;
+}
 
 .logo {
   width: 99px !important;
@@ -46,4 +51,20 @@ body {
   font-family: 'Ruslan Display' !important;
   font-size: 24px !important;
   font-weight: 400 !important;
+}
+
+.percentage{
+  color: #FFCDA8;
+  font-family: 'Ruslan Display';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.status{
+  color: #000000;
+  font-family: 'Ruslan Display';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
 }

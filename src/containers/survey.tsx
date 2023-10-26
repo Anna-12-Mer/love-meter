@@ -33,6 +33,7 @@ const Survey: React.FC<SurveyProps> = ({ questions }) => {
 
   return <>
     <Question
+        questionIndex = {currentQuestionIndex}
         question={questions[currentQuestionIndex].question}
         options={questions[currentQuestionIndex].options}
         imagePath={questions[currentQuestionIndex].image}
