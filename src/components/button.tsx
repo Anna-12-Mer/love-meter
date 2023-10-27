@@ -8,7 +8,7 @@ interface ButtonProps {
 const CustomButton: React.FC<ButtonProps> = ({ buttonText, buttonFunction }) => {
     return <>
         <Container className='defaultFontText'>
-            <Button variant="default"  className='customButton' onClick={buttonFunction}>{buttonText}</Button>
+            <Button variant="default"  className={buttonText === 'Back'? 'customBackButton customButton':'customButton'} onClick={buttonFunction}>{buttonText}</Button>
         </Container>
     </>;
 };

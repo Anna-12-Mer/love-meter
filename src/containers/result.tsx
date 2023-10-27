@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { Col, Container , Row} from "react-bootstrap";
+import { Container , Row} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../components/button";
 import loadingGif from "../assets/loading-img.gif";
