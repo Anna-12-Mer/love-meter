@@ -26,12 +26,7 @@ const Result: FC = () => {
         <Container> 
             <Level/>
             <Row className='buttonsColumn'>
-                    <Col style={{
-                        justifyContent: 'end', display: 'grid'
-                    }}><CustomButton buttonText="Again" buttonFunction={()=>{navigate('/survey')}} /></Col>
-                    <Col style={{
-                        justifyContent: 'start', display: 'grid'
-                    }}> <CustomButton buttonText="Share" buttonFunction={()=>{}} /></Col>
+                 <CustomButton buttonText="Again" buttonFunction={()=>{navigate('/survey')}} />
             </Row>
         </Container>}
     </>;
