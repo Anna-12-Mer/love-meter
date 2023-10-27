@@ -64,7 +64,7 @@ const Question: React.FC<QuestionProps> = ({ question, questionIndex, options, i
     
     return <Container className='defaultFontText'>
                 <Row className='center'>
-                    <img alt='love-o-meter' src={imagePath} className='questionImage' />
+                    <img alt='love-meter' src={imagePath} className='questionImage' />
                 </Row>
                 <AnimatedQuestion animate={animateQuestion}>{question}</AnimatedQuestion>
                 <Container className='options'>

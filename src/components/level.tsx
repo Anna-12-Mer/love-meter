@@ -27,23 +27,23 @@ const Level: FC = () => {
     
     return <>
         {/* <Row className='center'> <img alt='result love-meter' src={} className='result'/></Row> */}
-         <Row className='center percentage'>{((loveMeterScore/30)*100).toFixed(0)}%</Row> 
+         <Row className='center percentageFontText'>{((loveMeterScore/30)*100).toFixed(0)}%</Row> 
         {(loveMeterScore <= 30 && loveMeterScore >= 25) ?
             <>
-            <Row className='center status'>{levels[30].status}</Row>
+            <Row className='center statusFontText'>{levels[30].status}</Row>
             <Row className='center defaultFontText'>of respondents in relationships believe they've found "the one," while the other 10% are hoping their partner will stop stealing the blankets at night.</Row>
             <p className="subDefaultFontText">Remember, these percentages are all in good fun and meant to bring a smile to your face. Embrace the joy and laughter, and let love, humor, and happiness guide your way! 🌟😄</p>
             </>
             :
             (loveMeterScore < 25 && loveMeterScore >= 10) ?
                      <>
-            <Row className='center status'>{levels[20].status}</Row>
+            <Row className='center statusFontText'>{levels[20].status}</Row>
             <Row className='center defaultFontText'></Row>
             <p className="subDefaultFontText">Remember, these percentages are all in good fun and meant to bring a smile to your face. Embrace the joy and laughter, and let love, humor, and happiness guide your way! 🌟😄</p>
 
             </> :
             <>
-            <Row className='center status'>{levels[10].status}</Row>
+            <Row className='center statusFontText'>{levels[10].status}</Row>
             <Row className='center defaultFontText'></Row>
             <p className="subDefaultFontText">Remember, these percentages are all in good fun and meant to bring a smile to your face. Embrace the joy and laughter, and let love, humor, and happiness guide your way! 🌟😄</p>
 

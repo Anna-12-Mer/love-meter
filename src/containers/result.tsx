@@ -12,13 +12,15 @@ const Result: FC = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        },2000)
+        },5000)
     })
 
     return <>
         {loading ?
-        <Container>
-            <img alt='loading' src={loadingGif} className='result' />
+            <Container>
+                <Row className="center">
+                    <img alt='loading' src={loadingGif} className='customLoadingImg' />
+                </Row>
         </Container> 
          :
         <Container> 

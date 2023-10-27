@@ -37,6 +37,9 @@ body {
   width: 99px !important;
   margin: 20px;
 }
+.customLoadingImg{
+    width: 300px !important;
+}
 
 .center {
   justify-content: center;
@@ -53,17 +56,19 @@ body {
   font-weight: 400 !important;
 }
 
-.percentage{
+.percentageFontText{
   color: #FFCDA8;
   font-family: 'Ruslan Display';
+  text-align: center;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
 }
 
-.status{
+.statusFontText{
   color: #000000;
   font-family: 'Ruslan Display';
+  text-align: center;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
