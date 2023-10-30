@@ -26,7 +26,13 @@ const Level: FC = () => {
     });
     
     return <>
-        {/* <Row className='center'> <img alt='result love-meter' src={} className='result'/></Row> */}
+        {(loveMeterScore <= 30 && loveMeterScore >= 25) ?
+            <Row className='center'> <img alt='result love-meter' src={levels[30].image} className='loveMeterScoreImage' /></Row>
+        :
+            (loveMeterScore < 25 && loveMeterScore >= 10) ?
+             <Row className='center'> <img alt='result love-meter' src={levels[20].image} className='loveMeterScoreImage' /></Row>
+        : <Row className='center'> <img alt='result love-meter' src={levels[10].image} className='loveMeterScoreImage' /></Row>
+        }
          <Row className='center percentageFontText'>{((loveMeterScore/30)*100).toFixed(0)}%</Row> 
         {(loveMeterScore <= 30 && loveMeterScore >= 25) ?
             <>

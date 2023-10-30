@@ -1,4 +1,17 @@
 import questionImage from '../assets/question1.png'
+import questionTwoImage from '../assets/question2.png'; 
+import questionTreeImage from '../assets/playlist.png'
+import idealDateImage from '../assets/ideal_date.png'; 
+import silliestThingImage from '../assets/silliest_thing.png'
+import checkingPhoneImage from '../assets/love-message.png'; 
+import spiritAnimalImage from '../assets/spirit-animal.png'; 
+import heartImage from '../assets/heart.png';
+import loveQuoteImage from '../assets/love-quote.png'
+import loveImage from '../assets/love.png'
+import moderateLevelImage from '../assets/giphy.gif';
+import lowLevelImage from '../assets/low_level.gif';
+import loveInAirImage from '../assets/love-in-air.gif'
+
 export const loveOMeterSurveyQuestions = [
  {
         question: 'How often do you catch yourself daydreaming about your crush or significant other?',
@@ -16,7 +29,7 @@ export const loveOMeterSurveyQuestions = [
             "Panic stations! I turn into a clumsy oaf. 🙈",
             "Pretend to be busy with anything else to avoid awkwardness. 🚶‍♂️",
         ],
-        image: questionImage,
+        image: questionTwoImage,
     }, {
         question: "How many love songs do you have on your playlist?",
         options: [
@@ -24,7 +37,7 @@ export const loveOMeterSurveyQuestions = [
             "A few mixed in with other genres. 🎶 ",
             "Love songs ? My playlist is all about breakup anthems! 💔 "
         ],
-        image: questionImage,
+        image: questionTreeImage,
     }, {
         question: "Describe your ideal date night:",
         options: [
@@ -32,7 +45,7 @@ export const loveOMeterSurveyQuestions = [
             "Something adventurous and exciting! 🎢 ",
             "Netflix and pizza in PJs. 🍿"
         ],
-        image: questionImage,
+        image: idealDateImage,
     }, {
         question: "What's the silliest thing you've done to impress someone you like?",
         options: [
@@ -40,7 +53,7 @@ export const loveOMeterSurveyQuestions = [
             "Wrote a love poem that made no sense whatsoever. 📝 ",
             "Sent a random GIF and hoped for the best. 🤷‍♀️ "
         ],
-        image: questionImage,
+        image: silliestThingImage,
     },
     {
         question: "What's your reaction when someone flirts with you?",
@@ -49,7 +62,7 @@ export const loveOMeterSurveyQuestions = [
             "Flustered and blushing. 😳",
             "I doubt anyone is flirting with me. 🙄"
         ],
-        image: questionImage,
+        image: loveImage,
     },
     {
         question: "How often do you check your phone for a text from your crush?",
@@ -58,7 +71,7 @@ export const loveOMeterSurveyQuestions = [
             "Whenever I remember. 🤔",
             "Phone ? Who needs one ? 📵"
         ],
-        image: questionImage,
+        image: checkingPhoneImage,
     },
     {
         question: "What's your spirit animal when you're in love?",
@@ -67,7 +80,7 @@ export const loveOMeterSurveyQuestions = [
             "Awkward penguin. 🐧  ",
             "Grumpy cat. 😾",
         ],
-        image: questionImage,
+        image: spiritAnimalImage,
     }, {
         question: "How do you handle a crush-related embarrassment?",
         options: [
@@ -75,7 +88,7 @@ export const loveOMeterSurveyQuestions = [
             "Blush and run away. 🏃‍♀️",
             "Hide under a rock and never come out. 🙈",
         ],
-        image: questionImage,
+        image: heartImage,
     }, {
         question: "Choose a funny love-related quote that best describes your current state:",
         options: [
@@ -83,7 +96,7 @@ export const loveOMeterSurveyQuestions = [
             "Love is sharing your popcorn.It's popcorn love. 🍿 ",
             "If you can't remember my name, just say 'chocolate' and I'll turn around. 🍫 ",
         ],
-        image: questionImage,
+        image: loveQuoteImage,
     },
 
 
@@ -125,7 +138,7 @@ export const weights = {
 
 // Define the ranges for different levels of the love meter
 export const levels = {
-  10: { status: "Ruslan Display", level: "1" },
-  20: { status: "Moderate", level: "2" },
-  30: { status: "Love is in the Air", level: "3" },
+  10: { status: "Low", level: "1" , image: lowLevelImage },
+  20: { status: "Moderate", level: "2", image: moderateLevelImage },
+  30: { status: "Love is in the Air", level: "3" ,image: loveInAirImage},
 };

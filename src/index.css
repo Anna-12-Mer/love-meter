@@ -76,3 +76,6 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+.loveMeterScoreImage{
+  width: auto !important;
+}
