@@ -6,6 +6,7 @@ import CustomButton from './button';
 import styled, { keyframes, css } from 'styled-components';
 import { zoomIn } from 'react-animations';
 import AnswersContext from '../hooks/answersContext';
+import { useTranslation } from 'react-i18next';
 
 // Create the wobble animation
 const wobbleAnimation = keyframes`${zoomIn}`;
@@ -21,8 +22,6 @@ const AnimatedRadioInput = styled.div<{ animate: boolean }>`
   ${({ animate }) => animate && animatedStyles}
 `;
 
-
-
 interface QuestionProps {
     question: string;
     options: string[];
@@ -36,6 +35,8 @@ const Question: React.FC<QuestionProps> = ({ question, questionIndex, options, i
     const [animateQuestion, setAnimateQuestion] = useState(true);
     const [animateRadioInputs, setAnimateRadioInputs] = useState(true);
     const { answers, setAnswers } = useContext(AnswersContext); 
+    const { t } = useTranslation();
+
     
     const handleOptionChange = (event, questionIndex) => {
         setSelectedOption(event.target.value);
@@ -85,10 +86,10 @@ const Question: React.FC<QuestionProps> = ({ question, questionIndex, options, i
                 <Row className='buttonsColumn'>
                     <Col style={{
                         justifyContent: 'end', display: 'grid'
-                    }}><CustomButton buttonText="Back" buttonFunction={handleBackButtonClick} /></Col>
+                    }}><CustomButton buttonText={t('back')} buttonFunction={handleBackButtonClick} /></Col>
                     <Col style={{
                         justifyContent: 'start', display: 'grid'
-                    }}> <CustomButton buttonText="Next" buttonFunction={handleNextButtonClick} /></Col>
+                    }}> <CustomButton buttonText={t('next')}buttonFunction={handleNextButtonClick} /></Col>
                 </Row>
         </Container>
       
