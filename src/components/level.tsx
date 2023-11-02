@@ -1,61 +1,78 @@
-import React, { FC, useContext, useEffect, useState} from "react";
+import React, { FC, useCallback, useContext, useEffect, useMemo, useState} from "react";
 import { Row } from "react-bootstrap";
-import { levels, weights } from "../utils/questions.data";
+import { levels, levels_de, levels_fr, weights, weights_de, weights_fr } from "../utils/questions.data";
 import AnswersContext from "../hooks/answersContext";
+import { useTranslation } from "react-i18next";
 
 const Level: FC = () => {
     const [loveMeterScore, setLoveMeterScore] = useState(0); 
     const {answers} = useContext(AnswersContext);
+    const { i18n } = useTranslation();
+    const { t } = useTranslation();
 
-    // Calculate the love meter score
-    const handelLoveScore = () => {
-        let loveScore = 0;
-        answers.forEach((answer) => {
-            console.log(weights[answer]);
-            
-            if (weights[answer]) {
+    const weightsByLanguage = useMemo(() => {
+        return {
+        en: weights,
+        fr: weights_fr,
+        de: weights_de,
+        };
+    }, []);
 
-                loveScore += weights[answer];
-            }
-        });
-        setLoveMeterScore(loveScore); 
-    }
+    const levelsByLanguage = useMemo(() => {
+        return {
+            en: levels,
+            fr: levels_fr,
+            de: levels_de
+        }
+    }, [])
+
+    const calculateLoveScore = useCallback((answers, language) => {
+    let loveScore = 0;
+    const weights = weightsByLanguage[language];
+
+    answers.forEach((answer) => {
+      if (weights[answer]) {
+        loveScore += weights[answer];
+      }
+    });
+
+    return loveScore;
+  }, [weightsByLanguage]);
+
 
     useEffect(() => {
-        handelLoveScore()
-    });
+    const handleLoveScore = () => {
+      const score = calculateLoveScore(answers, i18n.language);
+      setLoveMeterScore(score);
+    };
+    handleLoveScore();
+  }, [answers, i18n.language, calculateLoveScore]);
+
+    const getLevel = (score, language) => {
+        if (score <= 30 && score >= 25) {
+        return levelsByLanguage[language][30];
+        } else if (score < 25 && score >= 10) {
+        return levelsByLanguage[language][20];
+        } else {
+        return levelsByLanguage[language][10];
+        }
+    };
+
+  const level = getLevel(loveMeterScore, i18n.language);
     
     return <>
-        {(loveMeterScore <= 30 && loveMeterScore >= 25) ?
-            <Row className='center'> <img alt='result love-meter' src={levels[30].image} className='loveMeterScoreImage' /></Row>
-        :
-            (loveMeterScore < 25 && loveMeterScore >= 10) ?
-             <Row className='center'> <img alt='result love-meter' src={levels[20].image} className='loveMeterScoreImage' /></Row>
-        : <Row className='center'> <img alt='result love-meter' src={levels[10].image} className='loveMeterScoreImage' /></Row>
-        }
-         <Row className='center percentageFontText'>{((loveMeterScore/30)*100).toFixed(0)}%</Row> 
-        {(loveMeterScore <= 30 && loveMeterScore >= 25) ?
-            <>
-            <Row className='center statusFontText'>{levels[30].status}</Row>
-            <Row className='center defaultFontText'>of respondents in relationships believe they've found "the one," while the other 10% are hoping their partner will stop stealing the blankets at night.</Row>
-            <p className="subDefaultFontText">Remember, these percentages are all in good fun and meant to bring a smile to your face. Embrace the joy and laughter, and let love, humor, and happiness guide your way! 🌟😄</p>
-            </>
-            :
-            (loveMeterScore < 25 && loveMeterScore >= 10) ?
-                     <>
-            <Row className='center statusFontText'>{levels[20].status}</Row>
-            <Row className='center defaultFontText'></Row>
-            <p className="subDefaultFontText">Remember, these percentages are all in good fun and meant to bring a smile to your face. Embrace the joy and laughter, and let love, humor, and happiness guide your way! 🌟😄</p>
+      <Row className='center'>
+        <img alt='result love-meter' src={level.image} className='loveMeterScoreImage' />
 
-            </> :
-            <>
-            <Row className='center statusFontText'>{levels[10].status}</Row>
-            <Row className='center defaultFontText'></Row>
-            <p className="subDefaultFontText">Remember, these percentages are all in good fun and meant to bring a smile to your face. Embrace the joy and laughter, and let love, humor, and happiness guide your way! 🌟😄</p>
-
-            </>
-        }
+      </Row>
+      <Row className='center percentageFontText'>{((loveMeterScore / 30) * 100).toFixed(0)}%</Row>
+      <Row className='center statusFontText'>{level.status}</Row>
+      <Row className='center defaultFontText'></Row>
+      <p className='subDefaultFontText'>
+        {t('rememberMessage')}
+      </p>
     </>
+    
 }
 
 export default Level; 

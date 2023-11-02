@@ -99,98 +99,7 @@ export const loveOMeterSurveyQuestions_en = [
         image: loveQuoteImage,
     },
 ]
-export const loveOMeterSurveyQuestions_ar = [
-      {
-        question :"كم مرة تجد نفسك تخيلين بحلم عن عشيقك أو الشريك الخاص بك؟",
-        options: [
-          "كل لحظة يقظة! 🌟",
-          " أحيانًا، عندما أشعر بالملل. 🤔",
-          " لا، أنا أحلم بالبيتزا في كثير من الأحيان. 🍕"
-        ],
-        image: questionImage
-      },
-      {
-        question: "ما هي رد فعلك المعتاد عندما ترى عشيقك يتجه نحوك؟",
-        options: [
-          "تم تفعيل وضع العملية السلسة! 😎",
-          "محطات الذعر! أتحول إلى أحمق متلثم. 🙈",
-          "أتظاهر بأنني مشغول بأي شيء آخر لتجنب الإحراج. 🚶‍♂️"
-        ],
-        image: questionTwoImage
-      },
-      {
-        question: "كم عدد الأغاني الرومانسية التي لديك في قائمة التشغيل الخاصة بك؟",
-        options: [
-          "إنه مهرجان أغاني الحب! 🎵 ",
-          "بعض المختلطة مع أنواع موسيقية أخرى. 🎶 ",
-          "أغاني الحب؟ قائمة التشغيل الخاصة بي تتكون كلها من أناشيد الفراق! 💔 "
-        ],
-        image: questionTreeImage
-      },
-      {
-        question: "صف ليلة الموعد المثالية بالنسبة لك:",
-        options: [
-          "عشاء رومانسي مضاء بالشموع تحت النجوم. 🌌 ",
-          "شيء مغامر ومثير! 🎢 ",
-          "نتفليكس وبيتزا في الملابس الداخلية. 🍿"
-        ],
-        image: idealDateImage
-      },
-      {
-        question: "ما هو أغبى شيء فعلته لإ impressionssion شخص تحبه؟",
-        options: [
-          "حاولت القيام بقفزة الظهر وفشلت بشكل مذهل. 😅 ",
-          "كتبت قصيدة حب لم تكن لها أي معنى. 📝 ",
-          "أرسلت صورة متحركة عشوائية وأملت في الأفضل. 🤷‍♀️ "
-        ],
-        image: silliestThingImage
-      },
-      {
-        question: "ما رد فعلك عندما يتحرش شخص ما بك؟",
-        options: [
-          "مستوى الثقة 1000! 🔥 ",
-          "مرتبك ومحمر. 😳",
-          "أشك في أن أي شخص يتحرش بي. 🙄"
-        ],
-        image: loveImage
-      },
-      {
-        question: "كم مرة تفحص هاتفك للحصول على رسالة نصية من شخص تحبه؟",
-        options: [
-          "بشكل مهووس، إنها تكاد تكون ملصقة بيدي. 📱",
-          "كلما تذكرت. 🤔",
-          "هاتف؟ من يحتاج إليه؟ 📵"
-        ],
-        image: checkingPhoneImage
-      },
-      {
-        question: "ما هو حيوان روحك عندما تكون في حالة حب؟",
-        options: [
-          "عصفور الحب! 🕊️ ",
-          "بطريق محرج. 🐧  ",
-          "قط متعكر. 😾"
-        ],
-        image: spiritAnimalImage
-      },
-      {
-        question: "كيف تتعامل مع الإحراج المتعلق بالعشق؟",
-        options: [
-          "ضحك بشكل احترافي. 😂 ",
-          "تحمر وتهرب. 🏃‍♀️",
-          "الاختباء تحت صخرة وعدم الخروج أبدًا. 🙈"
-        ],
-        image: heartImage
-      },
-      {
-        question: "اختر اقتباسًا مضحكًا متعلقًا بالحب يصف حالتك الحالية بشكل أفضل:",
-        options: [
-          "الحب مثل الغاز؛ إذا كنت مضطرًا لفعله، فمن المحتمل أنه عبث. 💨 ",
-          "الحب هو مشاركة الفشار. إنه حب الفشار. 🍿 ",
-          "إذا لم تتذكر اسمي ، فقط قل 'شوكولاتة' وسأتحول. 🍫 "
-        ],
-        image: loveQuoteImage
-      }
-    ]
+
 export const loveOMeterSurveyQuestions_de = [{
     question: 'Wie oft erwischen Sie sich dabei, wie Sie von Ihrem Schwarm oder Ihrem Partner träumen?',
     options: [
@@ -350,7 +259,7 @@ export const loveOMeterSurveyQuestions_fr = [
 {
     question: 'Quel est votre animal spirituel lorsque vous êtes amoureux ?',
     options: [
-        'L\'oiseau d\'amour ! 🕊️ ',
+        'Oiseau d\'amour ! 🕊️ ',
         'Pingouin maladroit. 🐧 ',
         'Chat grincheux. 😾',
     ],
@@ -411,9 +320,88 @@ export const weights = {
   "If you can't remember my name, just say 'chocolate' and I'll turn around. 🍫 ":1,
 };
 
+export const weights_fr = {
+  "À chaque instant éveillé ! 🌟": 3,
+  "De temps en temps, quand je m'ennuie. 🤔": 2,
+  "Nah, je rêve plus souvent de pizza. 🍕": 1,
+  "Mode opérateur en douceur activé ! 😎": 3,
+  "Stations de panique ! Je me transforme en maladroit. 🙈": 2,
+  "Prétendre être occupé avec autre chose pour éviter les situations gênantes. 🚶‍♂️": 1,
+  "C'est un festival de chansons d'amour ! 🎵 ": 3,
+  "Quelques-unes mélangées à d'autres genres. 🎶 ": 2,
+  "Des chansons d'amour ? Ma playlist ne contient que des hymnes de rupture ! 💔 ": 1,
+  "Dîner aux chandelles romantique sous les étoiles. 🌌": 3,
+  "Quelque chose d'aventureux et d'excitant ! 🎢 ": 2,
+  "Netflix et pizza en pyjama. 🍿": 1,
+  "J'ai essayé de faire un salto arrière et j'ai échoué de manière spectaculaire. 😅": 3,
+  "J'ai écrit un poème d'amour qui n'avait aucun sens. 📝 ": 2,
+  "J'ai envoyé un GIF aléatoire et j'ai espéré le meilleur. 🤷‍♀️": 1,
+  "Niveau de confiance à 1000 ! 🔥 ": 3,
+  "Confus et rougissant. 😳": 2,
+  "Je doute que quelqu'un flirte avec moi. 🙄": 1,
+  "Obsessivement, il est pratiquement collé à ma main. 📱": 3,
+  "Chaque fois que je m'en souviens. 🤔": 2,
+  "Téléphone ? Qui en a besoin ? 📵": 1,
+  "Oiseau d'amour ! 🕊️": 3,
+  "Pingouin maladroit. 🐧 ": 2,
+  "Chat grincheux. 😾": 1,
+  "Je ris comme un pro. 😂": 3,
+  "Je rougis et je m'enfuis. 🏃‍♀️": 2,
+  "Je me cache sous un rocher et je ne sors jamais. 🙈": 1,
+  "L'amour, c'est comme un pet ; si vous devez le forcer, c'est probablement de la merde. 💨 ": 3,
+  "L'amour, c'est partager votre popcorn. C'est l'amour du popcorn. 🍿 ": 2,
+  "Si vous ne pouvez pas vous rappeler mon nom, dites simplement \"chocolat\" et je me retournerai. 🍫 ": 1,
+};
+
+export const weights_de = {
+  "Jeden wachen Moment! 🌟": 3,
+  "Gelegentlich, wenn mir langweilig ist. 🤔": 2,
+  "Nee, ich träume öfter von Pizza. 🍕": 1,
+  "Smooth Operator-Modus aktiviert! 😎": 3,
+  "Panic-Stationen! Ich werde zu einem ungeschickten Trottel. 🙈": 2,
+  "Vortäuschen, mit irgendetwas anderem beschäftigt zu sein, um Peinlichkeiten zu vermeiden. 🚶‍♂️": 1,
+  "Es ist ein Liebeslied-Festival! 🎵": 3,
+  "Ein paar gemischt mit anderen Genres. 🎶": 2,
+  "Liebeslieder? Meine Playlist dreht sich nur um Trennungshymnen! 💔 ": 1,
+  "Romantisches Abendessen bei Kerzenschein unter den Sternen. 🌌": 3,
+  "Etwas Abenteuerliches und Aufregendes! 🎢 ": 2,
+  "Netflix und Pizza in Schlafanzügen. 🍿": 1,
+  "Versucht, einen Rückwärtssalto zu machen und spektakulär gescheitert. 😅 ": 3,
+  "Ein Liebesgedicht geschrieben, das überhaupt keinen Sinn ergab. 📝 ": 2,
+  "Ein zufälliges GIF geschickt und auf das Beste gehofft. 🤷‍♀️ ": 1,
+  "Selbstvertrauen auf Stufe 1000! 🔥 ": 3,
+  "Verlegen und errötend. 😳": 2,
+  "Ich bezweifle, dass jemand mit mir flirtet. 🙄": 1,
+  "Besessen, es ist praktisch an meine Hand geklebt. 📱": 3,
+  "Immer wenn ich mich daran erinnere": 2,
+  "Telefon? Wer braucht schon eins? 📵": 1,
+  "Liebesvogel! 🕊️ ": 3,
+  "Ungeschickter Pinguin. 🐧 ": 2,
+  "Grantige Katze. 😾": 1,
+  "Lachen Sie es wie ein Profi weg. 😂": 3,
+  "Erröten und wegrennen. 🏃‍♀️": 2,
+  "Verstecken Sie sich unter einem Felsen und kommen Sie nie wieder heraus. 🙈": 1,
+  "Liebe ist wie ein Furz; wenn man ihn erzwingen muss, ist er wahrscheinlich Mist. 💨 ": 3,
+  "Liebe ist, dein Popcorn zu teilen. Es ist Popcorn-Liebe. 🍿 ": 2,
+  "Wenn Sie sich nicht an meinen Namen erinnern können, sagen Sie einfach \"Schokolade\", und ich werde mich umdrehen. 🍫 ": 1,
+};
+
+
 // Define the ranges for different levels of the love meter
 export const levels = {
   10: { status: "Low", level: "1" , image: lowLevelImage },
   20: { status: "Moderate", level: "2", image: moderateLevelImage },
   30: { status: "Love is in the Air", level: "3" ,image: loveInAirImage},
+};
+
+export const levels_fr = {
+  10: { status: "Faible", level: "1", image: lowLevelImage },
+  20: { status: "Modéré", level: "2", image: moderateLevelImage },
+  30: { status: "L'amour est dans l'air", level: "3", image: loveInAirImage },
+};
+
+export const levels_de = {
+  10: { status: "Niedrig", level: "1", image: lowLevelImage },
+  20: { status: "Mäßig", level: "2", image: moderateLevelImage },
+  30: { status: "Die Liebe liegt in der Luft", level: "3", image: loveInAirImage },
 };

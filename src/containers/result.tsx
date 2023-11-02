@@ -4,10 +4,13 @@ import { useNavigate } from "react-router-dom";
 import CustomButton from "../components/button";
 import loadingGif from "../assets/loading-img.gif";
 import Level from "../components/level";
+import { useTranslation } from "react-i18next";
 
 const Result: FC = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true); 
+    const { t } = useTranslation();
+
 
     useEffect(() => {
         setTimeout(() => {
@@ -26,7 +29,7 @@ const Result: FC = () => {
         <Container> 
             <Level/>
             <Row className='buttonsColumn'>
-                 <CustomButton buttonText="Again" buttonFunction={()=>{navigate('/survey')}} />
+                 <CustomButton buttonText={t('again')} buttonFunction={()=>{navigate('/survey')}} />
             </Row>
         </Container>}
     </>;

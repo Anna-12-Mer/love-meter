@@ -4,13 +4,11 @@ import "./App.css";
 import { Container, Row } from "react-bootstrap";
 import Survey from "./containers/survey";
 import Result from "./containers/result";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import AnswersContext from "./hooks/answersContext";
 import "./i18n/i18n"; // Import i18n configuration
-import LanguageSelector from "./components/languageSelector";
 import { useTranslation } from "react-i18next";
 import {
-  loveOMeterSurveyQuestions_ar,
   loveOMeterSurveyQuestions_de,
   loveOMeterSurveyQuestions_en,
   loveOMeterSurveyQuestions_fr,
@@ -21,32 +19,29 @@ function App() {
     new Array(loveOMeterSurveyQuestions_en.length).fill("")
   );
   const { i18n } = useTranslation();
-  const [loveOMeterSurveyQuestions, setLoveOMeterSurveyQuestions] = useState(
-    []
-  );
-  const loadQuestions = () => {
+  const loadQuestions = useCallback(() => {
     switch (i18n.language) {
       case "en":
-        setLoveOMeterSurveyQuestions(loveOMeterSurveyQuestions_en);
-        break;
+        return loveOMeterSurveyQuestions_en;
       case "de":
-        setLoveOMeterSurveyQuestions(loveOMeterSurveyQuestions_de);
-        break;
+        return loveOMeterSurveyQuestions_de;
       case "fr":
-        setLoveOMeterSurveyQuestions(loveOMeterSurveyQuestions_fr);
-        break;
+        return loveOMeterSurveyQuestions_fr;
       default:
-        setLoveOMeterSurveyQuestions(loveOMeterSurveyQuestions_en);
+        return loveOMeterSurveyQuestions_en;
     }
-  };
+  }, [i18n.language]);
+
+  const loveOMeterSurveyQuestions = useMemo(
+    () => loadQuestions(),
+    [loadQuestions]
+  );
   useEffect(() => {
-    loadQuestions();
-  }, [i18n.language, loveOMeterSurveyQuestions]);
+    console.log(loveOMeterSurveyQuestions);
+  }, [loveOMeterSurveyQuestions]);
+
   return (
     <AnswersContext.Provider value={{ answers, setAnswers }}>
-      <Row className="languageSelector defaultFontText">
-        <LanguageSelector />
-      </Row>
       <Container className="App">
         <Routes>
           <Route exact path="/" element={<Home />} />
