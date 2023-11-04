@@ -17,3 +17,11 @@
   bottom: 16px ;
   position: fixed;
 }
+
+.languageSelector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none !important;
+}
