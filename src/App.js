@@ -14,7 +14,7 @@ function App() {
 
   return (
     <AnswersContext.Provider value={{ answers, setAnswers }}>
-      <Container className="App">
+      <Container className="h-full flex justify-center items-center text-center flex-wrap flex-col">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route
@@ -24,7 +24,7 @@ function App() {
           />
           <Route exact path="/survey-complete" element={<Result />} />
         </Routes>
-        <Row className="center footer defaultFontText">
+        <Row className="fixed bottom-0 w-full justify-center items-center text-center text-secondary-500 text-sm mb-4">
           Copyright © 2023. All Rights Reserved.
         </Row>
       </Container>

@@ -18,8 +18,8 @@ const Result: FC = () => {
     return <>
         {loading ?
             <Container>
-                <Row className="center">
-                    <img alt='loading' src={loadingGif} className='customLoadingImg' />
+                <Row className="justify-center">
+                    <img alt='loading' src={loadingGif} className='!w-72' />
                 </Row>
         </Container> 
          :

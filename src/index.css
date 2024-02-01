@@ -1,48 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&family=Ruslan+Display&display=swap');
 
+
 html {
-  height: 100%;
+ @apply h-full
 }
 
 div#root {
-  height: 100%;
-  padding: 0 30px;
+  @apply h-full pt-0 pb-8
 }
 
 body {
-  height: 100%;
-  background-color: #FEFAFF !important;
-  font-family: 'Ruda';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply h-full bg-white font-primary 
 }
 
-
-.defaultFontText {
-  color: #2E2133;
-  text-align: center;
-  font-family: 'Ruda';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .subDefaultFontText{
-  text-align: center;
-  margin-top: 20px;
-  color: #B8A4C0;
+  @apply justify-center items-center text-center mt-5 text-secondary-500
 }
 
-.logo {
-  width: 99px !important;
-  margin: 20px;
-}
-.customLoadingImg{
-    width: 300px !important;
-}
-
-.center {
-  justify-content: center;
+.defaultFontText{
+  @apply h-full flex justify-center items-center text-center flex-wrap flex-col;
 }
 
 .customButton {
