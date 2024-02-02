@@ -12,7 +12,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        primary: "Ruda",
+        ruda: ["Ruda"],
+        ruslan: ["Ruslan Display"],
       },
     },
   },

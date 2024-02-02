@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&family=Ruslan+Display&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
 html {
  @apply h-full
 }
@@ -12,7 +11,7 @@ div#root {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply h-full bg-white font-primary 
+  @apply h-full bg-white !font-ruda 
 }
 
 .subDefaultFontText{
@@ -24,17 +23,11 @@ body {
 }
 
 .customButton {
-  margin: 20px;
-  border-radius: 5px !important;
-  background: #E4A5FF !important;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.13) !important;
-  color: #FEFAFF !important;
-  font-family: 'Ruslan Display' !important;
-  font-size: 24px !important;
-  font-weight: 400 !important;
+    @apply m-5 !rounded-md !bg-primary !text-white !text-2xl !font-normal !shadow !font-ruslan; 
+  
 }
 .customBackButton{
-  background: #B8A4C0 !important;
+  background: #B8A4C0 !important; 
 }
 
 .percentageFontText{
